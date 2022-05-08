@@ -4,6 +4,8 @@ import './App.css';
 import { InputTodo } from './components/inputTodo';
 import {IncompleteTodos} from './components/IncompleteTodos';
 import { CompleteTodos } from './components/CompleteTodos';
+//テスト
+import { Defultarea } from './components/Defultarea';
 
 export const App = ()　=> {
     //state初期設定(入力側)
@@ -55,6 +57,11 @@ export const App = ()　=> {
         setIncompleteTodos(newIncompleteTodos);
       }
     
+
+      //テスト
+      const [defultText, setDefultText] = useState('');
+      const onChangeDefultarea = (event) => setDefultText(event.target.value);
+  
   return(
   <>
   <InputTodo 
@@ -62,6 +69,14 @@ export const App = ()　=> {
   onChange={onChangeTodoText} 
   onClick={onClickAdd}
   />
+
+  <Defultarea 
+    defultText={defultText} //propsの名前と、渡したいもの
+    onChangeTest={onChangeDefultarea}
+
+    buttonName={"追加せよ"}
+  />
+
   <IncompleteTodos 
   todos={incompleteTodos} 
   onClickComplete={onClickComplete} 

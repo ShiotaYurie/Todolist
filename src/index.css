@@ -67,3 +67,11 @@ li{
   align-items: center;
   padding-bottom: 4px;
 } 
+
+.defult-input{
+  width: 200px;
+  border-radius: 10px;
+  padding: 8x;
+  margin: 10px;
+
+}
